@@ -1,0 +1,16 @@
+name: Dependabot target
+
+# Gives Dependabot an outdated action to update, so its pull requests exercise the CLA gate.
+# Only runs when started by hand.
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.0.0
+        with:
+          persist-credentials: false
